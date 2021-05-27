@@ -7,7 +7,10 @@ RUN JOBS=MAX npm install -g --production --unsafe-perm \
        node-red \
        node-red-admin \
        node-red-contrib-balena \
-       node-red-contrib-graph-oauth-login
+       node-red-contrib-graph-oauth-login \
+       node-red-contrib-uibuilder \
+       vue@"2.*" \
+       vuetify
 
 ###
 # Runtime image
