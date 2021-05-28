@@ -31,6 +31,7 @@ services:
     image: balenablocks/fbcp
     privileged: true
   node-red:
+    name: node-red
     build: ./node-red
     volumes:
       - 'resin-data:/data'
