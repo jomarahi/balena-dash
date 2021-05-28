@@ -2,6 +2,8 @@ version: '2'
 volumes:
   settings:
   resin-data:
+networks:
+  net1:
 services:
   kiosk:
     restart: always
@@ -11,6 +13,8 @@ services:
       - 8080:8080
     volumes:
       - 'settings:/data'
+    networks:
+      - net1
   scheduler:
     restart: always
     build: ./scheduler
@@ -30,9 +34,10 @@ services:
     build: ./node-red
     volumes:
       - 'resin-data:/data'
+    networks:
+      - net1
     restart: always
     privileged: true
-    network_mode: host
     labels:
       io.balena.features.supervisor-api: '1'
     cap_add:
