@@ -34,8 +34,9 @@ services:
     build: ./node-red
     volumes:
       - 'resin-data:/data'
-    networks:
-      - net1
+    network_mode: host
+#     networks:
+#       - net1
     restart: always
     privileged: true
     labels:
