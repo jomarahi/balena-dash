@@ -167,6 +167,12 @@ module.exports = {
     //    next();
     //},
 
+    contextStorage: {
+      default: {
+        module: "localfilesystem"
+      }
+    },
+    
     // Anything in this hash is globally available to all functions.
     // It is accessed as context.global.
     // eg:
