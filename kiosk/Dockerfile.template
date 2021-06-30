@@ -8,7 +8,7 @@ WORKDIR /go/src/github.com/mozz100/tohora
 RUN go build 
 
 
-FROM balenablocks/browser:latest
+FROM balenablocks/browser:raspberrypi3
 
 RUN install_packages cec-utils
 
