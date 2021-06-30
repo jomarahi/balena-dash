@@ -8,7 +8,7 @@ WORKDIR /go/src/github.com/mozz100/tohora
 RUN go build 
 
 
-FROM balenablocks/browser:V1
+FROM balenablocks/browser:latest
 
 RUN install_packages cec-utils
 
